@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import http from '../Http';
 import './Login.css'
 import axios from "axios"
-import MensagemAcerto from './MensagemAcerto'
-import MensagemErro from './MensagemErro';
+import MensagemErro from './MensagemAlerta';
 const Cadastro = () =>{
 
     const [nome, setNome] = useState('')
@@ -21,6 +20,7 @@ const Cadastro = () =>{
     const [username, setUsername] = useState('')
     const [senha, setSenha] = useState('')
     const [mensagem, setMensagem] = useState('')
+    const [tipo, setTipo] = useState('');
 
     const obterCep = (evento) => {
         if (!evento.target.value){
@@ -65,9 +65,11 @@ const Cadastro = () =>{
         http.post('cliente', usuario)
         .then(response => { 
             console.log(response.data)
+            setTipo("sucesso")
             setMensagem("Cadastro Efetuado com sucesso")
             setTimeout(() => {
                 setMensagem("")
+                setTipo('')
             }, 4000)
 
         })
@@ -188,8 +190,7 @@ const Cadastro = () =>{
                 <label>Senha</label>
                 <input onChange={manipuladorSenha} type="password" required></input>
             </div>
-            { mensagem && <MensagemAcerto msg={mensagem} /> }
-            { mensagem && <MensagemErro msg={mensagem} /> }
+            { mensagem && <MensagemErro tipo={tipo} msg={mensagem} /> }
             <button className="botaoLoginCadastro">Cadastrar</button>
         </form>
     </div>

@@ -1,4 +1,4 @@
-import MensagemErro from './MensagemErro'
+import MensagemErro from './MensagemAlerta'
 
 import http from '../Http'
 import './Login.css'
@@ -10,6 +10,7 @@ const Login = ({onLogin}) =>{
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const history = useHistory();
+    const [tipo, setTipo] = useState('');
 
 
     useEffect(() => {
@@ -41,6 +42,7 @@ const Login = ({onLogin}) =>{
             }
             setTimeout(() => {
               setMensagem('')
+              setTipo('')
             }, 4000);
           })
     }
@@ -56,7 +58,7 @@ const Login = ({onLogin}) =>{
     return (
         <div>
         <h1>Tela de Login</h1>
-        { mensagem && <MensagemErro msg={mensagem} /> }
+        { mensagem && <MensagemErro tipo={tipo} msg={mensagem} /> }
         <form onSubmit={efetuarLogin}>
  
             <div>

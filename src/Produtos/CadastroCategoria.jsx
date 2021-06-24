@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import './formProduto.css';
 import http from "../Http";
-import MensagemErro from '../Login/MensagemErro';
+import MensagemErro from '../Login/MensagemAlerta';
 const FormularioRegistroCategoria = () => {
 
     const [nome, setNome] = useState('');
@@ -9,6 +9,8 @@ const FormularioRegistroCategoria = () => {
     const [descricao, setDescricao] = useState('');
 
     const [mensagem, setMensagem] = useState('');
+
+    const [tipo, setTipo] = useState('');
 
     const manipuladorNome = (evento) => {
         setNome(evento.target.value)
@@ -33,6 +35,7 @@ const FormularioRegistroCategoria = () => {
             console.log(response.data)
             setMensagem("Cadastro Efetuado com sucesso")
             setTimeout(() => {
+                setTipo("sucesso")
                 setMensagem("")
             }, 3000)
         }).catch(erro => {
@@ -40,6 +43,7 @@ const FormularioRegistroCategoria = () => {
             setMensagem("Cadastro não efetuado")
             setTimeout(() => {
                 setMensagem('')
+                setTipo('')
             }, 4000)
         })
     }
@@ -59,7 +63,7 @@ const FormularioRegistroCategoria = () => {
                 </div>
 
 
-                {mensagem && <MensagemErro msg={mensagem} />}
+                {mensagem && <MensagemErro tipo={tipo} msg={mensagem} />}
                 <button className="botaoProdCadastro">
                     Cadastrar Categoria
                 </button>

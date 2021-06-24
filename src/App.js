@@ -6,11 +6,9 @@ import Produtos from './Produtos/Produtos';
 import Produto from './Produtos/ProdutoDetalhe';
 import CadastroProduto from './Produtos/CadastroProduto';
 import Perfil from './Login/Perfil';
-import Carrinho from './Carrinho/Carrinho';
 import { useEffect, useState } from 'react';
 import Categoria from './Produtos/Categoria';
 import CadastroCategoria from './Produtos/CadastroCategoria';
-import Finalizar from './Carrinho/Finalizar';
 
 function App() {
 
@@ -32,20 +30,6 @@ function App() {
   }, [])
 
 
-  const [carrinho, setCarrinho] = useState([])
-  const adicionaProduto = (item) =>{
-    console.log(item)
-    item.quantidade = 1;
-    setCarrinho([
-      ...carrinho,
-      item
-    ])
-  }
-
-  const aoExcluir = (indice) =>{
-    carrinho.splice(indice, 1)
-    setCarrinho([...carrinho])
-  }
 
   return (
     <BrowserRouter>
@@ -64,7 +48,7 @@ function App() {
           <Perfil/>
         </Route>
         <Route path="/produtos/:nome">
-          <Produto aoAdicionar={adicionaProduto} />
+          <Produto />
         </Route>
         <Route path="/cadastroproduto">
           <CadastroProduto />
@@ -74,12 +58,6 @@ function App() {
         </Route>
         <Route path="/cadastrocategoria">
           <CadastroCategoria />
-        </Route>
-        <Route path="/finalizar/:id">
-          <Finalizar />
-        </Route>
-        <Route path="/carrinho">
-          <Carrinho produtos={carrinho} aoExcluir={aoExcluir} />
         </Route>
       </Switch>
     </BrowserRouter>

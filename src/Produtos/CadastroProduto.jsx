@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './formProduto.css';
 import http from "../Http";
-import MensagemErro from '../Login/MensagemErro';
+import MensagemErro from '../Login/MensagemAlerta';
 const FormularioRegistro = () => {
 
     const [nome, setNome] = useState('');
@@ -11,6 +11,7 @@ const FormularioRegistro = () => {
     const [quantidadeEstoque, setQuantidadeEstoque] = useState('');
     const [categoria, setCategoria] = useState('');
     const [mensagem, setMensagem] = useState('');
+    const [tipo, setTipo] = useState('');
 
     const manipuladorNome = (evento) => {
         setNome(evento.target.value)
@@ -56,8 +57,10 @@ const FormularioRegistro = () => {
 
         http.post('produto', produto).then(response => {
             console.log(response.data)
+            setTipo("sucesso")
             setMensagem("Cadastro Efetuado com sucesso")
             setTimeout(() => {
+                setTipo("")
                 setMensagem("")
             }, 3000)
         }).catch(erro => {
@@ -102,7 +105,8 @@ const FormularioRegistro = () => {
                     ))}
                 </select>
             </div>
-            { mensagem && <MensagemErro msg={mensagem} /> }
+ 
+            {mensagem && <MensagemErro tipo={tipo} msg={mensagem} />}
             <button className="botaoProdCadastro">
                 Cadastrar
             </button>

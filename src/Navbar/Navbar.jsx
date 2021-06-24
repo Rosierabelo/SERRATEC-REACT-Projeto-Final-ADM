@@ -19,13 +19,13 @@ const Navbar = ({token, aoLogout}) =>{
                 <div>
                     <nav>
                         <ul>
-                            <li><Link className="tituloTopo" to="/">Home</Link></li>
+                            <li><Link className="tituloTopo" to="/">Produto</Link></li>
+                            <li><Link className="tituloTopo" to="/categoria">Categoria</Link></li>
                             <li><Link className="tituloTopo" to="/cadastroproduto">Cadastar Produto</Link></li>
                             <li><Link className="tituloTopo" to="/cadastrocategoria">Cadastar Categoria</Link></li>
                             <li><Link className="tituloTopo" onClick={logout}>Logout</Link></li>
                         </ul>
                         <ul>
-                            <li><Link  to="/carrinho"><img className="carrinho" src={carrinho}></img></Link></li>
                             <li><Link  to="/perfil"><img className="carrinho" src={perfil}></img></Link></li>
                         </ul>
                     </nav>
