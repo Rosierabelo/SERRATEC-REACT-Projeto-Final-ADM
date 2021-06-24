@@ -19,6 +19,12 @@ h1 {
     width: 100%;
 }
 
+/* Categorias */
+
+.categoria{
+    float:none;
+}
+
 /* Card Produto */
 
 .cardProduto{
