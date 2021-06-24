@@ -1,0 +1,111 @@
+/* Produtos */
+
+.bodyProduto{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+  }
+.sectionProduto {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Card Produto */
+
+.cardProduto{
+    border: 3px solid #333;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 20px;
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardPreco{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.link{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.titulo{
+    width: 95%;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color:#333;
+    color: floralwhite;
+    margin: 3px 1px;
+    min-height: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Detalhe Produto */
+
+.detalhe-prod{
+    border: 3px solid #333;
+    border-radius: 5px;
+    width: 30%;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+.detalheItem{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo-prod{
+    width: 95%;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color:#333;
+    color: floralwhite;
+    margin: 3px 1px;
+    min-height: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.preco-prod{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.comprar{
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.comprar:hover{
+    background-color: black;
+    color: white;
+}

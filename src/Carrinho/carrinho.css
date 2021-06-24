@@ -1,0 +1,88 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 60px;
+  }
+  /* .preco{
+    display: flex;
+    flex: row;
+    align-items: center;
+  } */
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .botaoComprar{
+      width: 200px;
+      margin-left: 80vh;
+      margin-top: 50px;
+      font-size: 20px;
+      padding: 5px;
+      background-color: transparent;
+      border: 3px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 15px;
+  }
+
+  .botaoComprar:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .botaoExcluir{
+    width: 100px;
+    font-size: 12px;
+    padding: 5px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .botaoExcluir:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .inputCarrinho{
+    width: 130px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .selectPagamento{
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: #dddddd;
+  }
+
+  .botaoFinalizar{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 5px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .botaoFinalizar:hover{
+    background-color: black;
+    color: white;
+  }

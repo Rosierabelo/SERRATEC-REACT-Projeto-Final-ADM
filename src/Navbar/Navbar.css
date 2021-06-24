@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li .tituloTopo {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .tituloTopo:hover{
+    font-size: 20px;
+  }
+
+  .carrinho{
+    height: 50px;
+    margin-right: 30px;
+    margin-top: 18px;
+  }
