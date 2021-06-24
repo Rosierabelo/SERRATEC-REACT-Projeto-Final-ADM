@@ -28,7 +28,7 @@ const Produto = ({ aoAdicionar }) => {
                     <div className="preco-prod">
                         <p>R$ </p><p>{produto.preco.toFixed(2)}</p>
                     </div>
-                    <Link to="/carrinho"><button className="comprar" onClick={adicionaAoCarrinho}>Comprar</button></Link>
+                    
                 </div>
             </div>
         </div>

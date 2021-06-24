@@ -16,7 +16,7 @@ const Categoria = () => {
             <ul className="lista-categorias">
                 {
                     categorias.map((categoria, indice) => (
-                        <Link key={indice} to={`/categoria/${categoria.id}`}>
+                        <Link className="categoriaLink" key={indice} to={`/categoria/${categoria.id}`}>
                             <li className="categoria">
                                 {categoria.nome}
 
