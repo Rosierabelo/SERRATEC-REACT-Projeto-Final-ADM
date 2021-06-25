@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import http from '../Http';
 import './Login.css'
 import axios from "axios"
