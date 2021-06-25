@@ -175,10 +175,6 @@ const Cadastro = () =>{
                 <input value={rua} onChange={obterCep}  type="text"></input>
             </div>
             <div>
-                <label>Numero Residencial</label>
-                <input value={numeroResidencia} onChange={manipuladorNumero} type="number" required></input>
-            </div>
-            <div>
                 <label>Email</label>
                 <input value={email} onChange={manipuladorEmail} type="text" required></input>
             </div>
