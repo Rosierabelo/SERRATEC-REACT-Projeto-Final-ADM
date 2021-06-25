@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0px;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    
+  }
 .fundo{
     min-height: 120vh;
     background-image: url(./imagem.png);
@@ -5,6 +13,10 @@
     background-repeat: no-repeat;
 }
 h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: "Lobster", cursive;
+    margin-bottom: 20px;
     margin-top: 0px;
-    color: rgba(128, 128, 128, 0.972)
+    color: rgb(128, 128, 128)
 }
