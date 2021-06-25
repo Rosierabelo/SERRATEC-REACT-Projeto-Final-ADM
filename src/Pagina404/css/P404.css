@@ -1,0 +1,6 @@
+.fundo{
+    min-height: 120vh;
+    background-image: url(./imagem.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

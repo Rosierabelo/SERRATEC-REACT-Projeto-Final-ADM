@@ -8,6 +8,7 @@ import Perfil from './Login/Perfil';
 import { useEffect, useState } from 'react';
 import Categoria from './Produtos/Categoria';
 import CadastroCategoria from './Produtos/CadastroCategoria';
+import Pagina404 from './Pagina404/Pagina404';
 
 function App() {
 
@@ -54,6 +55,9 @@ function App() {
         </Route>
         <Route path="/cadastrocategoria">
           <CadastroCategoria />
+        </Route>
+        <Route >
+          <Pagina404 />
         </Route>
       </Switch>
     </BrowserRouter>
