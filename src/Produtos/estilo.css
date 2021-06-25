@@ -40,6 +40,9 @@ h1 {
     color: white;
     text-decoration: none;
 }
+.categoriaLink:hover{
+    text-decoration: none;
+}
 
 /* Card Produto */
 
@@ -75,6 +78,9 @@ h1 {
     margin: 3px 1px;
     min-height: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.imagem{
+    width: 95%;
 }
 
 /* Detalhe Produto */
@@ -115,19 +121,4 @@ h1 {
     align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-}
-.comprar{
-    width: 100%;
-    font-size: 20px;
-    padding: 5px;
-    background-color: transparent;
-    border: 3px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.comprar:hover{
-    background-color: black;
-    color: white;
 }

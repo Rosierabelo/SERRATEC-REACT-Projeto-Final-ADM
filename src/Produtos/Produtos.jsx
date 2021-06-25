@@ -15,7 +15,7 @@ const Produtos = () => {
         <div className="bodyProduto">
             <h1>Produtos</h1>
             <section className="sectionProduto"> 
-                {produtos.map((item, indice) => <CardProdutos key={indice} id={item.id} codigo={item.codigo} categoria={item.categoria.nome} nome={item.nome} descricao={item.descricao} preco={item.preco.toFixed(2)}/>)}
+                {produtos.map((item, indice) => <CardProdutos key={indice} url={item.url} codigo={item.codigo} categoria={item.categoria.nome} nome={item.nome} descricao={item.descricao} preco={item.preco.toFixed(2)}/>)}
             </section>
         </div>
     )
