@@ -1,7 +1,6 @@
 /* Produtos */
 
 .bodyProduto{
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -21,8 +20,13 @@ h1 {
 
 /* Categorias */
 
+.lista-categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .categoria{
-    width: 20%;
     font-size: 20px;
     padding: 5px;
     background-color: transparent;
@@ -31,9 +35,10 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 15px;
+    margin: 20px;
     float:none;
     color: #333;
+    
 }
 .categoria:hover{
     background-color: black;

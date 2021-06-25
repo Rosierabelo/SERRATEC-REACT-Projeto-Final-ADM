@@ -12,7 +12,6 @@ const CardProdutos = ({ nome, preco, url, categoria }) => {
                <div> <h4>{categoria}</h4></div>
                 <div className='cardPreco'><p>R$ </p><p>{preco}</p></div>
             </div>
-            <div className='link'><Link to={`/produtos/${nome}`}>Ver detalhes</Link></div>
         </div>
     )
 }
