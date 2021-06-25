@@ -79,6 +79,9 @@ h1 {
     min-height: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.imagem{
+    width: 95%;
+}
 
 /* Detalhe Produto */
 

@@ -12,6 +12,7 @@ const FormularioRegistro = () => {
     const [categoria, setCategoria] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [tipo, setTipo] = useState('');
+    const [url, setUrl] = useState('');
 
     const manipuladorNome = (evento) => {
         setNome(evento.target.value)
@@ -37,6 +38,10 @@ const FormularioRegistro = () => {
         setCategoria(evento.target.value)
     }
 
+    const manipuladorUrl = (evento) => {
+        setUrl(evento.target.value)
+    }
+
     const [categorias, setCategorias] = useState([])
     useEffect(() => {
         http.get('categoria/todas').then(response => setCategorias(response.data))
@@ -50,6 +55,7 @@ const FormularioRegistro = () => {
             descricao: descricao,
             preco: preco,
             quantidadeEstoque: quantidadeEstoque,
+            url:url,
             categoria:{
                 id: categoria
             }
@@ -96,6 +102,11 @@ const FormularioRegistro = () => {
                 <label className="labels">Quantidade em Estoque</label>
                 <input required value={quantidadeEstoque} onChange={manipuladorQuantidadeEstoque} />
             </div>
+            <div>
+                <label className="labels">URL da Imagem</label>
+                <input required value={url} onChange={manipuladorUrl} />
+            </div>
+            
             <div>
                 <label className="labels">Categoria</label>
                 <select className="selecionaCateg" onChange={manipuladorCategoria}>
