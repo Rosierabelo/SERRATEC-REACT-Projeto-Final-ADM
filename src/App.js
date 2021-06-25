@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import Categoria from './Produtos/Categoria';
 import CadastroCategoria from './Produtos/CadastroCategoria';
 import Pagina404 from './Pagina404/Pagina404';
+import './App.css';
 
 function App() {
 
